@@ -10,7 +10,8 @@ function App() {
   const [Contact,setContact] = useState([])
 
   const addContact = (data) => {
-        setContact([data])
+        setContact([...Contact, {id: uuid4()} ,data])
+        console.log(Contact);
   }
 
   return (

@@ -13,6 +13,7 @@ function Card({addContact}) {
             return
         }
         addContact(contactData);
+        setContactData({name: "",email: ""})
     }
   return (
     <div>
