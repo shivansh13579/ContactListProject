@@ -16,8 +16,8 @@ function Card({addContact}) {
         setContactData({name: "",email: ""})
     }
   return (
-    <div>
-      <div>Add Contact </div>
+    <div className='card'>
+      <div className='cardHeader'>Add Contact </div>
       <form action="">
         <div>
             <label htmlFor="">Name:</label><br />
@@ -36,7 +36,7 @@ function Card({addContact}) {
              <br />
         </div>
       </form>
-      <button onClick={handleAdd}>Add Contact</button>
+      <button className='btn' onClick={handleAdd}>Add Contact</button>
     </div>
   )
 }

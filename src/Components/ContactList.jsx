@@ -2,20 +2,21 @@ import React from 'react'
 import { Trash } from 'lucide-react';
 
 
-function ContactList({contact}) {
+function ContactList(props) {
+  const {contact,removeContact} = props;
   const contactList = contact.map((val)=>{
     return(
-      <div>
-        <div>{val.name}</div>
-        <div>{val.email}</div>
+      <div className='data'>
+        <div>{val.data.name}</div>
+        <div>{val.data.email}</div>
+        <span onClick={()=>removeContact(val.id)}><Trash/></span>
       </div>
     )
   })
   return (
     <>
-      <div className='text-red-700'>ContactList</div>
-      <div className='flex text-center justify-between w-full'>{contactList} </div>
-      <span><Trash/></span>
+      <div className='contactlist'>ContactList</div>
+      <div> {contactList} </div>
     </>
   )
 }
